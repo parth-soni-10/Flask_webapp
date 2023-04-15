@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>File Upload</title>
+	<style>
+		body {
+			background-image: url('v2osk-In4XVKhYaiI-unsplash.jpg');
+			background-image: url('https://images.unsplash.com/photo-1483519173755-be893fab1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2108&q=80');
+			background-size: cover;
+			font-family: Arial, sans-serif;
+			color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+
+		.transparent-box {
+			background-color: rgba(255, 255, 255, 0.6);
+			border-radius: 5px;
+			padding: 20px;
+			margin: 50px auto;
+			max-width: 450px;
+			box-shadow: 2px 2px 5px #000;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 48px;
+			margin: 0 0 50px 0;
+			text-shadow: 2px 2px #000;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 20px;
+		}
+		
+		input[type=file] {
+			border: none;
+			border-radius: 5px;
+			padding: 10px;
+			font-size: 20px;
+			background-color: grey;
+			box-shadow: 2px 2px 2px #000;
+			margin-bottom: 20px;
+			max-width: 400px;
+		}
+		
+		button[type=submit] {
+			background-color: #9c27b0;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			cursor: pointer;
+			font-size: 24px;
+			padding: 10px;
+			text-align: center;
+			text-shadow: 1px 1px #000;
+			transition: background-color 0.2s;
+			width: 200px;
+		}
+		
+		button[type=submit]:hover {
+			background-color: #673ab7;
+		}
+	</style>
+</head>
+<body>
+	<h1>File Upload</h1>
+
+	<!-- Transparent box to hold form -->
+	<div class="transparent-box">
+		<!-- Form to upload file -->
+		<form id="upload_form" action="/process_upload" method="post" enctype="multipart/form-data">
+			<input type="file" name="file">
+			<button type="submit">Upload</button>
+		</form>
+	</div>
+</body>
+</html>
