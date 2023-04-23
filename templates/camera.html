@@ -4,7 +4,6 @@
 	<title>Eye Image Processing</title>
 	<style>
 		body {
-			background-image: url('colin-lloyd-suj3od1uMv8-unsplash.jpg');
 			background-image: url('https://images.unsplash.com/photo-1617339860632-f53c5b5dce4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -53,17 +52,42 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background-color: rgba(255, 255, 255, 0.5);
-			padding: 10px; /* Adjusted padding value */
-			border-radius: 5px;
+			background-color: rgba(255, 255, 255, 0.8);
+			padding: 30px;
+			border-radius: 10px;
 			text-align: center;
-	}
+			box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+			color: #ca0d0d;
+		}
+
+		h2 {
+			font-size: 36px;
+			margin-bottom: 20px;
+			font-weight: bold;
+		}
+
+		p {
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+		.transparent-box {
+		animation: fade-in 1s ease-out;
+		}
+
+		@keyframes fade-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+		}
 	</style>
 </head>
 <body>
 	<div class="transparent-box">
 		<h2>Welcome to Eye Image Processing</h2>
-		<p>Please click the button below to capture an image.</p>
+		<p>Our advanced image processing technology can help you get a better look at your eyes.</p>
 		<form method="post" action="/process_camera">
 			<input type="submit" value="Capture Image">
 		</form>
